@@ -1,0 +1,9 @@
+# remove this comment before saving this file, Put this into your ~/.vimrc file, to make a .vimrc file run 'touch ~/.vimrc' then 'vim ~/.vimrc'
+
+set number
+syntax on
+ 
+inoremap kj <esc>
+vnoremap kj <esc>
+cnoremap kj <esc>
+
