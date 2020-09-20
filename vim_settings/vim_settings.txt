@@ -7,3 +7,5 @@ inoremap kj <esc>
 vnoremap kj <esc>
 cnoremap kj <esc>
 
+set tabstop=4
+set expandtab
