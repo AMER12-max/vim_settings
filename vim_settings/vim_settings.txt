@@ -31,7 +31,7 @@ call plug#begin()
 Plug 'tomasiser/vim-code-dark'
 Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/lightline.vim'
-
+Plug 'sentientmachine/Pretty-Vim-Python'
 
 call plug#end()
 
@@ -49,3 +49,5 @@ let g:lightline = {
        \ }
 " Usual font settings
 " set guifont=JetBrains_Mono_Medium:h14
+
+highlight Comment cterm=bold
