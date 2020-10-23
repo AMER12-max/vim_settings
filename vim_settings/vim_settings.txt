@@ -12,6 +12,7 @@ set smartindent
 set nowrap
 set smartcase
 set noerrorbells
+set nobackup
 
 cnoremap ii <esc>
 vnoremap ii <esc>
