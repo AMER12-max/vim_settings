@@ -13,6 +13,7 @@ set nowrap
 set smartcase
 set noerrorbells
 set nobackup
+set nowritebackup
 
 cnoremap ii <esc>
 vnoremap ii <esc>
@@ -27,13 +28,14 @@ autocmd FileType python imap <buffer> <C-J> <esc>:w<CR>:exec '!python3' shellesc
 
 call plug#begin()
 
-Plug 'morhetz/gruvbox'
+Plug 'tomasiser/vim-code-dark'
 Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/lightline.vim'
 
+
 call plug#end()
 
-colorscheme gruvbox
+colorscheme codedark
 set background=dark
 
 "MOST IMPORTANT: vertically centering screen (default is 'zz') automatically when enter
@@ -45,3 +47,5 @@ set laststatus=2
 let g:lightline = {
        \ 'colorscheme': 'wombat',
        \ }
+" Usual font settings
+" set guifont=JetBrains_Mono_Medium:h14
