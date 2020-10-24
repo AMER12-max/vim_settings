@@ -8,6 +8,8 @@ Plug 'vim-python/python-syntax'
 Plug 'junegunn/seoul256.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdtree'
+Plug 'christoomey/vim-tmux-navigator'
+
 
 call plug#end()
 
