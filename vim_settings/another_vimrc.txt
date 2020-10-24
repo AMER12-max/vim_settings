@@ -1,3 +1,4 @@
+
 call plug#begin()
 
 Plug 'jiangmiao/auto-pairs'
@@ -6,15 +7,17 @@ Plug 'joshdick/onedark.vim'
 Plug 'vim-python/python-syntax'
 Plug 'junegunn/seoul256.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
-colorscheme onedark
 set number
+
+colorscheme onedark 
+set termguicolors
 syntax on
 
 let g:python_highlight_all = 1
-
 set noswapfile
 set incsearch
 set tabstop=4 softtabstop=4
@@ -35,8 +38,8 @@ inoremap ii <esc>
 nmap oo o<Esc>k
 
 " ctrl+j to run currently editing python file
-autocmd FileType python map <buffer> <C-J> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <C-J> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python map <buffer> <C-J> :w<CR>:exec '!python' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <C-J> <esc>:w<CR>:exec '!python' shellescape(@%, 1)<CR>
 
 autocmd InsertEnter * norm zz
 
@@ -48,5 +51,11 @@ let g:lightline = {
        \ }
 
 set clipboard=unnamed
-
 nnoremap // :noh<return>
+
+" NerdTree stuff/setup
+map <C-n> :NERDTreeToggle<CR>
+
+set encoding=UTF-8
+
+map <leader>r :NERDTreeFind<cr>
