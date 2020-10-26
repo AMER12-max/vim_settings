@@ -61,3 +61,5 @@ map <C-n> :NERDTreeToggle<CR>
 set encoding=UTF-8
 
 map <leader>r :NERDTreeFind<cr>
+
+set timeout timeoutlen=300
