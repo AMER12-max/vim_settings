@@ -1,6 +1,6 @@
 # remove this comment before saving this file, Put this into your ~/.vimrc file, to make a .vimrc file run 'touch ~/.vimrc' then 'vim ~/.vimrc'
 
-set number
+set number relativenumber
 syntax on
 
 set noswapfile
