@@ -31,6 +31,8 @@ set smartcase
 set noerrorbells
 set nobackup
 set nowritebackup
+set cursorline
+
 
 cnoremap ii <esc>
 vnoremap ii <esc>
