@@ -13,7 +13,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
-set number
+set number relativenumber
 
 colorscheme onedark 
 set termguicolors
