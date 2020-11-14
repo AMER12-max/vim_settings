@@ -1,0 +1,57 @@
+set number relativenumber
+syntax on
+
+set noswapfile
+set incsearch
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set nowrap
+set smartcase
+set noerrorbells
+set nobackup
+set nowritebackup
+set cursorline
+set termguicolors
+set clipboard=unamed
+
+cnoremap ii <esc>
+vnoremap ii <esc>
+inoremap ii <esc>
+
+" 'oo' to make new line without entering insert mode
+nmap oo o<Esc>k
+
+" ctrl+j to run currently editing python file
+autocmd FileType python map <buffer> <C-J> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <C-J> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
+call plug#begin()
+
+Plug 'morhetz/gruvbox'
+Plug 'jiangmiao/auto-pairs'
+Plug 'itchyny/lightline.vim'
+Plug 'sentientmachine/Pretty-Vim-Python'
+
+call plug#end()
+
+colorscheme gruvbox
+set background=dark
+let g:gruvbox_contrast='hard'
+
+"MOST IMPORTANT: vertically centering screen (default is 'zz') automatically when enter
+" insert mode
+autocmd InsertEnter * norm zz
+
+" Setting up Lightline
+set laststatus=2
+let g:lightline = {
+       \ 'colorscheme': 'wombat',
+       \ }
+
+highlight Comment cterm=bold
+
+" Allowing Transparent Background when using alacritty
+hi! Normal ctermbg=NONE guibg=NONE 
+hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
