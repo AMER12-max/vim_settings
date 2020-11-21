@@ -46,6 +46,7 @@ Plug 'tpope/vim-commentary'
 Plug 'morhetz/gruvbox'
 Plug 'vim-python/python-syntax'
 Plug 'itchyny/lightline.vim'
+Plug 'vim-scripts/AutoComplPop'
 
 call plug#end()
 
