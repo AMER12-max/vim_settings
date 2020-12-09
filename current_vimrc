@@ -54,7 +54,8 @@ let g:lightline = {
        \ 'colorscheme': 'wombat',
        \ }
 
-set clipboard=unnamed
+" allows copying and pasting
+set clipboard=unnamedplus
 nnoremap // :noh<return>
 
 set encoding=UTF-8
